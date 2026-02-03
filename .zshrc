@@ -21,7 +21,7 @@ setopt PROMPT_SUBST
 
 # Pretty prompt with soft rose/lavender tones
 # Shows: time · directory · git branch
-PROMPT='%F{218}steph%f 🐶 %F{183}%~%f${vcs_info_msg_0_} %F{218}❯%f '
+PROMPT='%F{218}%*%f %F{218}steph%f 🐶 %F{183}%~%f${vcs_info_msg_0_} %F{218}❯%f '
 
 # Right prompt shows exit code if non-zero
 RPROMPT='%(?..%F{210}✘ %?%f)'
