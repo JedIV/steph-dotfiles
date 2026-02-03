@@ -21,7 +21,54 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 ---
 
-## 2. Install Your Dotfiles
+## 2. Install & Configure Git
+
+Git comes with macOS but let's make sure you have the latest version and set it up:
+
+```bash
+brew install git
+```
+
+### Configure your identity
+
+Tell git who you are (use your GitHub email):
+
+```bash
+git config --global user.name "Steph"
+git config --global user.email "your-email@example.com"
+```
+
+### Set up SSH key for GitHub
+
+This lets you push/pull without typing your password:
+
+```bash
+# Generate a new SSH key
+ssh-keygen -t ed25519 -C "your-email@example.com"
+
+# Start the SSH agent
+eval "$(ssh-agent -s)"
+
+# Add your key to the agent
+ssh-add ~/.ssh/id_ed25519
+
+# Copy the public key to clipboard
+pbcopy < ~/.ssh/id_ed25519.pub
+```
+
+Now go to [GitHub Settings > SSH Keys](https://github.com/settings/keys), click "New SSH key", and paste your key.
+
+Test it works:
+
+```bash
+ssh -T git@github.com
+```
+
+You should see "Hi [username]! You've successfully authenticated..."
+
+---
+
+## 3. Install Your Dotfiles
 
 These are config files that make your terminal and vim look nice.
 
@@ -49,7 +96,7 @@ This installs the colorscheme and other plugins. Quit and reopen vim to see the 
 
 ---
 
-## 3. Install Node.js
+## 4. Install Node.js
 
 Claude Code requires Node.js. Install it with Homebrew:
 
@@ -66,7 +113,7 @@ npm --version
 
 ---
 
-## 4. Install Claude Code
+## 5. Install Claude Code
 
 Claude Code is Anthropic's AI coding assistant for the terminal.
 
@@ -102,7 +149,7 @@ claude
 
 ---
 
-## 5. Install Railway CLI
+## 6. Install Railway CLI
 
 Railway is a platform for deploying apps. Install the CLI:
 
@@ -203,4 +250,4 @@ $(brew --prefix)/opt/fzf/install
 
 ---
 
-Made with love by Jedi + Claude
+Made with love by Jedi
