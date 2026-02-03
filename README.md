@@ -205,7 +205,7 @@ railway open
 
 ### Colors look wrong in Terminal
 
-Make sure you're using a terminal that supports 256 colors. The built-in Terminal.app works, but [iTerm2](https://iterm2.com/) is nicer.
+Make sure you're using a terminal that supports 256 colors. The built-in Terminal.app works fine.
 
 ### Vim plugins didn't install
 
@@ -234,12 +234,6 @@ brew link railway
 ---
 
 ## Optional: Nice Extras
-
-### Install iTerm2 (better terminal)
-
-```bash
-brew install --cask iterm2
-```
 
 ### Install fzf (fuzzy finder, makes Ctrl+R even better)
 
