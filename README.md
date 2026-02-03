@@ -6,6 +6,14 @@ A step-by-step guide to get your terminal looking pretty and set up with Claude 
 
 ---
 
+## 0. Open Terminal
+
+Press `Cmd + Space` to open Spotlight, type **Terminal**, and hit Enter.
+
+You can also find it in Applications > Utilities > Terminal.
+
+---
+
 ## 1. Install Homebrew
 
 Homebrew is the package manager for macOS. Open Terminal and run:
