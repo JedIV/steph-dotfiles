@@ -1,5 +1,7 @@
 # Steph's Mac Terminal Setup Guide
 
+*Made with love by Jed*
+
 A step-by-step guide to get your terminal looking pretty and set up with Claude Code + Railway.
 
 ---
@@ -242,6 +244,3 @@ brew install fzf
 $(brew --prefix)/opt/fzf/install
 ```
 
----
-
-Made with love by Jedi
