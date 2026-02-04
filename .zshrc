@@ -9,22 +9,22 @@
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # ─────────────────────────────────────────────────────────────────
-# Colors & Prompt
+# Colors & Prompt (Solarized Light)
 # ─────────────────────────────────────────────────────────────────
 autoload -Uz colors && colors
 autoload -Uz vcs_info
 
 # Enable git info in prompt
 precmd() { vcs_info }
-zstyle ':vcs_info:git:*' formats ' %F{183}(%b)%f'
+zstyle ':vcs_info:git:*' formats ' %F{37}(%b)%f'
 setopt PROMPT_SUBST
 
-# Pretty prompt with soft rose/lavender tones
+# Pretty prompt with Solarized Light tones
 # Shows: time · directory · git branch
-PROMPT='%F{218}%*%f %F{218}steph%f 🐶 %F{183}%~%f${vcs_info_msg_0_} %F{218}❯%f '
+PROMPT='%F{33}%*%f %F{61}steph%f 🐶 %F{37}%~%f${vcs_info_msg_0_} %F{33}❯%f '
 
 # Right prompt shows exit code if non-zero
-RPROMPT='%(?..%F{210}✘ %?%f)'
+RPROMPT='%(?..%F{160}✘ %?%f)'
 
 # ─────────────────────────────────────────────────────────────────
 # History
@@ -59,10 +59,10 @@ zstyle ':completion:*' menu select                    # Menu selection
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS} # Colored completions
 
 # ─────────────────────────────────────────────────────────────────
-# Directory Colors
+# Directory Colors (Solarized Light)
 # ─────────────────────────────────────────────────────────────────
 export CLICOLOR=1
-export LSCOLORS=GxFxCxDxBxegedabagaced
+export LSCOLORS=ExGxFxDxCxegedabagacad
 
 # ─────────────────────────────────────────────────────────────────
 # Aliases
@@ -95,16 +95,16 @@ alias mv="mv -i"
 alias cp="cp -i"
 
 # ─────────────────────────────────────────────────────────────────
-# Colored Man Pages (soft rose theme)
+# Colored Man Pages (Solarized Light theme)
 # ─────────────────────────────────────────────────────────────────
 man() {
-    LESS_TERMCAP_mb=$'\e[1;35m' \
-    LESS_TERMCAP_md=$'\e[1;38;5;183m' \
+    LESS_TERMCAP_mb=$'\e[1;38;5;166m' \
+    LESS_TERMCAP_md=$'\e[1;38;5;33m' \
     LESS_TERMCAP_me=$'\e[0m' \
     LESS_TERMCAP_se=$'\e[0m' \
-    LESS_TERMCAP_so=$'\e[38;5;218m' \
+    LESS_TERMCAP_so=$'\e[38;5;136;48;5;254m' \
     LESS_TERMCAP_ue=$'\e[0m' \
-    LESS_TERMCAP_us=$'\e[4;38;5;183m' \
+    LESS_TERMCAP_us=$'\e[4;38;5;37m' \
     command man "$@"
 }
 

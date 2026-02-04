@@ -74,8 +74,8 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-" Color scheme - a softer gruvbox variant
-Plug 'sainnhe/gruvbox-material'
+" Color scheme - Solarized
+Plug 'altercation/vim-colors-solarized'
 
 " File explorer
 Plug 'scrooloose/nerdtree'
@@ -92,19 +92,17 @@ Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 " ─────────────────────────────────────────────────────────────────
-" Colorscheme (Gruvbox Material - softer variant)
+" Colorscheme (Solarized Light)
 " ─────────────────────────────────────────────────────────────────
 set termguicolors
-set background=dark
-let g:gruvbox_material_background = 'soft'
-let g:gruvbox_material_foreground = 'mix'
-let g:gruvbox_material_better_performance = 1
+set background=light
+let g:solarized_termcolors=256
 
 " Apply colorscheme (silently fail if not installed yet)
-silent! colorscheme gruvbox-material
+silent! colorscheme solarized
 
 " Lightline theme
-let g:lightline = {'colorscheme': 'gruvbox_material'}
+let g:lightline = {'colorscheme': 'solarized'}
 
 " Always show status line
 set laststatus=2
